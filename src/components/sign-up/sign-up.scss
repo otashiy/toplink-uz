@@ -1,0 +1,22 @@
+.sign-form {
+display: flex;
+align-items: stretch;
+flex-direction: column;
+}
+
+.sign-form input {
+display: block;
+margin-bottom: 10px;
+width: 100%;
+}
+
+
+
+.title {
+text-align: center;
+}
+
+.text {
+text-align: center;
+width: 300px;
+}
