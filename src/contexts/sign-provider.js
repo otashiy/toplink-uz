@@ -6,11 +6,11 @@ export const SignContext = createContext();
 
 const SignProvider = () => {
 
-const [token, setToken] = useState(localStorage.getItem("vdkjbvscsovbur98vhuwjbv98sgbiu29wvg87762fvugvc76f2vuyf83g374"));
+const [token, setToken] = useState(localStorage.getItem("token"));
 
 useEffect(() =>{
-if (token) {
-localStorage.setItem("token", token)
+    if (token) {
+        localStorage.setItem("token", token)
 }
 }, [token])
     return (
