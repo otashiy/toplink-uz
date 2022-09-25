@@ -53,7 +53,7 @@ navigate("/check-email")
             <span>{error}</span>
             </label>
             <label htmlFor="password">
-            Elektron pochta
+            Password
             <input type="password" ref={passwordRef} required placeholder="password" />
             <span>{error}</span>
             </label>
