@@ -1,8 +1,7 @@
 import "./sign.scss"; 
 
 import Container from "../container/container";
-import { useContext, useRef, useState } from "react";
-import { SignContext } from "../../contexts/sign-provider";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Sign = () => {
@@ -10,7 +9,6 @@ const Sign = () => {
 const nameRef = useRef();
 const telRef = useRef();
 
-const { setToken } = useContext(SignContext);
 
 const [error, setError] = useState("");
 
