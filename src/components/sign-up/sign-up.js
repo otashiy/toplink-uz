@@ -85,7 +85,7 @@ method: "POST"
 
         <div className="content">
         <p>Accountingiz mavjudmi?</p>
-        <Link to={"/access"}>Kirish</Link>
+        <Link to={"/main-sign"}>Kirish</Link>
         </div>
 
         <p>{error}</p>
