@@ -2,6 +2,7 @@
 display: flex;
 align-items: center;
 justify-content: space-between;
+padding: 15px 0;
 }
 
 .header__list {
@@ -13,5 +14,42 @@ align-items: center;
 }
 
 .header__list li {
-margin-right: 10px;
+margin-right: 40px;
+}
+
+.header__link {
+text-decoration: none;
+color: #333;
+transition: 0.5s all ease;
+
+&:hover{
+color: rgb(54, 54, 214);
+border-bottom: 1px solid rgb(54, 54, 214);
+}
+}
+
+.header__btn {
+padding: 0;
+padding: 10px 20px;
+margin-right: 20px;
+color: #fff;
+background-color: rgb(18, 18, 149);
+border-radius: 5px;
+border: none;
+
+&:hover {
+background-color: rgb(70, 70, 200);
+cursor: pointer;
+}
+
+&:active {
+color: #333;
+background-color: transparent;
+border: 1px solid rgb(64, 64, 227);
+padding: 9px 19px;
+}
+
+&:last-child {
+margin-right: 0;
+}
 }

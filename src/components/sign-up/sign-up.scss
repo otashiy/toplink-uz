@@ -1,22 +1,64 @@
 .sign-form {
+max-width: 400px;
 display: flex;
 align-items: stretch;
 flex-direction: column;
 }
 
-.sign-form input {
+
+.sign__input {
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px 65px;
+    border: 1px solid rgb(49, 49, 180);
+    outline: none;
+}
+
+.sign__btn {
 display: block;
-margin-bottom: 10px;
+padding: 0;
+padding: 10px 20px;
 width: 100%;
+border-radius: 10px;
+margin-top: 20px;
+background-color: rgb(18, 18, 149);
+border: none;
+color: #fff;
+cursor: pointer;
+
+&:hover {
+background-color: rgb(54, 54, 204);
+
+&:active {
+border: 1px solid rgb(54, 54, 204);
+padding: 9px 19px;
+}
+}
+}
+
+.content {
+display: flex;
+align-items: center;
+}
+
+.content__desc {
+margin-right: 95px;
+}
+
+.content__link {
+color: rgb(54, 54, 205);
 }
 
 
 
 .title {
 text-align: center;
+color: rgb(54, 54, 205);
 }
 
 .text {
 text-align: center;
 width: 300px;
+color: #000;
 }

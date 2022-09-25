@@ -64,28 +64,28 @@ method: "POST"
             <form className="sign-form" onSubmit={handleFormSubmit} action="#">
 
               <label htmlFor="email">
-                Elektron pochta
-                  <input type="email" ref={emailRef} placeholder="Ex abc@example.com" />
+                Elektron pochta <br />
+                  <input className="sign__input" type="email" ref={emailRef} placeholder="Ex abc@example.com" />
                     <span>{error}</span>
               </label>
 
             <label htmlFor="password">
-              Parol
-                <input type="password" ref={passwordRef} required placeholder="password" />
+              Parol <br />
+                <input className="sign__input" type="password" ref={passwordRef} required placeholder="password" />
                   <span>{error}</span>
               </label>
 
            <label htmlFor="text">
              Foydalanuvchi nomi
-                <input type="text" placeholder="Ex  Saul Ramirez" />
+                <input className="sign__input" type="text" placeholder="Ex  Saul Ramirez" />
               </label>
-           <button type="submit">Ro'yxatdan o'tish</button>
+           <button className="sign__btn" type="submit">Ro'yxatdan o'tish</button>
 
             </form>
 
         <div className="content">
-        <p>Accountingiz mavjudmi?</p>
-        <Link to={"/access"}>Kirish</Link>
+        <p className="content__desc">Accountingiz mavjudmi?</p>
+        <Link className="content__link" to={"/access"}>Kirish</Link>
         </div>
 
         <p>{error}</p>

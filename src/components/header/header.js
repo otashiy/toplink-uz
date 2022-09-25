@@ -8,22 +8,24 @@ const Header = () => {
         <>
        <Container>
        <div className="header-inner">
-        <Link to={"/"}>Toplink</Link>
+        <Link to={"/"}>
+            <img src="https://toplink.ee/wp-content/uploads/toplink.svg" alt="site-logo" width={93} height={43} />
+        </Link>
         <nav>
             <ul className="header__list">
                 <li>
-                    <a href="/">U qanday ishlaydi</a>
+                    <a className="header__link" href="/">U qanday ishlaydi</a>
                 </li>
                 <li>
-                    <a href="/">Xususiyat</a>
+                    <a className="header__link" href="/">Xususiyat</a>
                 </li>
             </ul>
         </nav>
-        <div className="header__btn">
-            <button type="button">
+        <div className="header__btn-content">
+            <button className="header__btn" type="button">
                 Kirish
             </button>
-            <button type="button">
+            <button className="header__btn" type="button">
                 Ro'yxatdan o'tish
             </button>
         </div>
