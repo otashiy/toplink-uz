@@ -34,7 +34,7 @@ if(res.ok) {
 })
 .then(data => {
 console.log(data);
-navigate("/")
+navigate("/main-sign")
 })
 .catch(e => setError(e.message))
 }
