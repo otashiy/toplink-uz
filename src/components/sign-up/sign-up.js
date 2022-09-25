@@ -63,7 +63,7 @@ method: "POST"
         
             <form className="sign-form" onSubmit={handleFormSubmit} action="#">
 
-              <label htmlFor="email">
+              <label htmlFor="email" className="email">
                 Elektron pochta <br />
                   <input className="sign__input" type="email" ref={emailRef} placeholder="Ex abc@example.com" />
                     <span>{error}</span>
@@ -71,13 +71,13 @@ method: "POST"
 
             <label htmlFor="password">
               Parol <br />
-                <input className="sign__input" type="password" ref={passwordRef} required placeholder="password" />
+                <input className="sign__input sign__input--password" type="password" ref={passwordRef} required placeholder="password" />
                   <span>{error}</span>
               </label>
 
            <label htmlFor="text">
              Foydalanuvchi nomi
-                <input className="sign__input" type="text" placeholder="Ex  Saul Ramirez" />
+                <input className="sign__input sign__input--person" type="text" placeholder="Ex  Saul Ramirez" />
               </label>
            <button className="sign__btn" type="submit">Ro'yxatdan o'tish</button>
 

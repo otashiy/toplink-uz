@@ -1,3 +1,5 @@
+
+
 .sign-form {
 max-width: 400px;
 display: flex;
@@ -61,4 +63,20 @@ color: rgb(54, 54, 205);
 text-align: center;
 width: 300px;
 color: #000;
+}
+
+.email {
+position: relative;
+
+&::before {
+display: block;
+width: 20px;
+height: 20px;
+content: "";
+position: absolute;
+top: 100px;
+left: 10px;
+background-image: url("../../assets/images/email.png");
+background-repeat: no-repeat;
+}
 }
