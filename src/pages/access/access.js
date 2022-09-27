@@ -35,6 +35,7 @@ if(emailValue && passwordValue) {
 .then(res => res.json())
 .then(data => {
 setToken(data.token)
+console.log(data.token);
 navigate("/check-email")
 })
 .catch(e => setError(e.message))

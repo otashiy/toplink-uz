@@ -2,13 +2,16 @@ import "./sign-up.scss";
 
 import { Link, useNavigate } from "react-router-dom";
 import Container from "../container/container";
-import { useContext, useRef, useState } from "react";
-import { SignContext } from "../../contexts/sign-provider";
+import { useRef, useState } from "react";
+// import { SignContext } from "../../contexts/sign-provider";
 
 const SignUp = () => {
 
 const emailRef = useRef();
 const passwordRef = useRef();
+const userNameRef = useRef();
+const nameRef = useRef();
+const telRef = useRef();
 
 
 const [error, setError] = useState("");
@@ -16,7 +19,7 @@ const [error, setError] = useState("");
 const navigate = useNavigate();
 
 
-const { setToken } = useContext(SignContext);
+// const { setToken } = useContext(SignContext);
 
 const handleFormSubmit = (evt) => {
 evt.preventDefault();
@@ -24,14 +27,20 @@ evt.preventDefault();
 
 const emailValue = emailRef.current.value;
 const passwordValue = passwordRef.current.value;
+const userNameValue = userNameRef.current.value;
+const nameValue = nameRef.current.value;
+const telValue = telRef.current.value;
 
 
-if(emailValue && passwordValue) {
+if(emailValue && passwordValue && userNameValue && nameValue && telValue) {
   fetch("http://207.154.246.125:8888/register", {
     
     body: JSON.stringify({
+      "username": userNameValue,
       "email": emailValue,
-      "password": passwordValue
+      "password": passwordValue,
+      "fullname": nameValue,
+      "phone": telValue
   }),
     headers: {
     'Content-Type': 'application/json'
@@ -40,14 +49,11 @@ method: "POST"
 
 
 })
-.then(res => {
-  if(res.ok) {
-    return res.json()
-}
-})
+.then(res => res.json())
 .then(data => {
-  setToken(data);
-  navigate("/sign");
+  
+  console.log(data);
+  navigate("/access");
 })
 .catch(e => setError(e.messsage))
 }
@@ -77,8 +83,21 @@ method: "POST"
 
            <label htmlFor="text">
              Foydalanuvchi nomi
-                <input className="sign__input sign__input--person" type="text" placeholder="Ex  Saul Ramirez" />
+                <input className="sign__input sign__input--person" type="text" ref={userNameRef} placeholder="Ex  Saul Ramirez" />
               </label>
+
+              <label htmlFor="text">
+                To'liq ism
+                <input type="text" name="text" ref={nameRef} id="name" required />
+                <span>{error}</span>
+            </label>
+
+            <label htmlFor="phone">
+                Telefon nomer
+                <input type="tel" name="phone" id="phone" ref={telRef} required />
+                <span>{error}</span>
+            </label>
+
            <button className="sign__btn" type="submit">Ro'yxatdan o'tish</button>
 
             </form>

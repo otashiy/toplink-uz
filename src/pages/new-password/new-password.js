@@ -21,7 +21,7 @@ if(emailValue && passwordValue) {
         method: "PUT",
         body: JSON.stringify({
             "email": emailValue,
-            "password": passwordValue
+            "newpassword": passwordValue
         }),
         headers: {
             'Content-Type': 'application/json'

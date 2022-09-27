@@ -30,6 +30,7 @@ if(codeValue) {
 })
 .then(res => res.json())
 .then(data => {
+console.log(data);
 navigate("/new-password")
 })
 .catch(e => setError(e.message))
