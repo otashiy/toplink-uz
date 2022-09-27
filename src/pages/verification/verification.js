@@ -22,7 +22,7 @@ if(codeValue) {
     fetch("http://207.154.246.125:8888/verificationcode", {
         method: "POST",
         body: JSON.stringify({
-            "number": codeValue
+            number: codeValue
         }),
         headers: {
             'Content-Type': 'application/json'

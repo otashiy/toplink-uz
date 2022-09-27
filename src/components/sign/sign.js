@@ -39,7 +39,6 @@ res.json()
 }
 })
 .then(data => {
-console.log(data);
 navigate("/access")
 })
 .catch(e => setError(e.message))

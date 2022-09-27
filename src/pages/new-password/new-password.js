@@ -18,7 +18,7 @@ const passwordValue = passwordRef.current.value;
 
 if(emailValue && passwordValue) {
     fetch("http://207.154.246.125:8888/newpassword", {
-        method: "POST",
+        method: "PUT",
         body: JSON.stringify({
             "email": emailValue,
             "password": passwordValue
