@@ -71,7 +71,7 @@ method: "POST"
 
               <label htmlFor="email" className="email">
                 Elektron pochta <br />
-                  <input className="sign__input" type="email" ref={emailRef} placeholder="Ex abc@example.com" />
+                  <input className="sign__input" type="email" ref={emailRef} placeholder="Email" />
                     <span>{error}</span>
               </label>
 
@@ -83,18 +83,18 @@ method: "POST"
 
            <label htmlFor="text">
              Foydalanuvchi nomi
-                <input className="sign__input sign__input--person" type="text" ref={userNameRef} placeholder="Ex  Saul Ramirez" />
+                <input className="sign__input sign__input--person" type="text" ref={userNameRef} placeholder="username" />
               </label>
 
               <label htmlFor="text">
                 To'liq ism
-                <input type="text" name="text" ref={nameRef} id="name" required />
+                <input type="text" placeholder="Type your name" className="sign__input" name="text" ref={nameRef} id="name" required />
                 <span>{error}</span>
             </label>
 
             <label htmlFor="phone">
                 Telefon nomer
-                <input type="tel" name="phone" id="phone" ref={telRef} required />
+                <input type="tel" placeholder="Type your phone" className="sign__input" name="phone" id="phone" ref={telRef} required />
                 <span>{error}</span>
             </label>
 
