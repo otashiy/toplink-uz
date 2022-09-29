@@ -71,24 +71,24 @@ method: "POST"
 
               <label htmlFor="email" className="email">
                 Elektron pochta <br />
-                  <input className="sign__input" type="email" ref={emailRef} placeholder="Email" />
+                  <input className="sign__input" name="email" type="email" ref={emailRef} placeholder="Email" />
                     <span>{error}</span>
               </label>
 
             <label htmlFor="password">
               Parol <br />
-                <input className="sign__input sign__input--password" type="password" ref={passwordRef} required placeholder="password" />
+                <input className="sign__input sign__input--password" name="password" type="password" ref={passwordRef} required placeholder="password" />
                   <span>{error}</span>
               </label>
 
            <label htmlFor="text">
              Foydalanuvchi nomi
-                <input className="sign__input sign__input--person" type="text" ref={userNameRef} placeholder="username" />
+                <input className="sign__input sign__input--person" name="username" type="text" ref={userNameRef} placeholder="username" />
               </label>
 
               <label htmlFor="text">
                 To'liq ism
-                <input type="text" placeholder="Type your name" className="sign__input" name="text" ref={nameRef} id="name" required />
+                <input type="text" placeholder="Type your name" className="sign__input" name="fullname" ref={nameRef} id="name" required />
                 <span>{error}</span>
             </label>
 
